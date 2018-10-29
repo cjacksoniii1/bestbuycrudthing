@@ -67,7 +67,7 @@ namespace doingconnectionstrings
                 conn.Open();        //opens connection
                         
                 MySqlCommand cmd = conn.CreateCommand();        //creates command
-                cmd.CommandText = "SELECT ProductID, Name, Price FROM products WHERE ProductID =" + id;     //command text
+                cmd.CommandText = "SELECT ProductID, Name, CatagoryID, Price FROM products WHERE ProductID =" + id;     //command text
                 MySqlDataReader dataReader = cmd.ExecuteReader();       //declares 'dataReader' to actually read shit
 
                 if (dataReader.Read())      //if entered parameter ID exists...
@@ -76,13 +76,17 @@ namespace doingconnectionstrings
                     {
                         Name = dataReader["Name"].ToString(),
                         ID = (int)dataReader["ProductID"],
+                        CatID = (int)dataReader["CatagoryID"],
                         Price = (decimal)dataReader["Price"]
                     };
                     return product;
 
                 }
                 else
+                {
+                    Console.WriteLine("No ID found");
                     return null;
+                }
             }
         }
 
@@ -134,7 +138,7 @@ namespace doingconnectionstrings
             }
 
         }
-        public int DeleteProduct(Product prod)             //delete
+        public int DeleteProduct(int ID)             //delete
         {
             var conn = new MySqlConnection(connStr);
 
@@ -143,7 +147,7 @@ namespace doingconnectionstrings
                 conn.Open();
                 var cmd = conn.CreateCommand();
                 cmd.CommandText = "DELETE FROM products WHERE ProductID = @id;";
-                cmd.Parameters.AddWithValue("id", prod.ID);
+                cmd.Parameters.AddWithValue("id", ID);
                 return cmd.ExecuteNonQuery();
             }
         }

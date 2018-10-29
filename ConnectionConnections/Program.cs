@@ -31,16 +31,16 @@ namespace doingconnectionstrings
                 if (response.ToLower() == "create")
                     CreateLogic();
                 if (response.ToLower() == "update")
-                    UpdateLogic();        //**TODO** make UpdateLog function
+                    UpdateLogic();       
                 if (response.ToLower() == "read")
-                    ReadLogic();          //**TODO** make ReadLog function
+                    ReadLogic();          
                 if (response.ToLower() == "delete")
-                    DeleteLogic();        //**TODO** make DeleteLog function
+                    DeleteLogic();        n
                 if (response.ToLower() == "end")
                     break;
                 else
                 {
-                    Console.WriteLine("Please give a valid command");
+                    Console.WriteLine("Please give a valid command or type \"end\"");
                     Console.WriteLine("*Create* | *Update* | *Read* | *Delete* ");
                 }
             }
@@ -63,12 +63,58 @@ namespace doingconnectionstrings
         }
         static void UpdateLogic()
         {
+            Product prod = new Product();
+
+            Console.WriteLine("Which product do you wish to update?");
+            prod.ID = GetInteger();
+            Console.WriteLine("Give me a name");
+            prod.Name = GetString();
+            Console.WriteLine("Give me a price");
+            prod.Price = GetPrice();
+            Console.WriteLine("Give me a Catagory ID");
+            prod.CatID = GetInteger();
+
+            int result = repo.UpdateProduct(prod);
+            if (result > 0)
+            {
+                Console.WriteLine("Update Succsesful");
+            }
+            else
+            {
+                Console.WriteLine("Update Unsuccsesful, Product ID does not exist");
+            }
         }
         static void ReadLogic()
         {
+            Console.WriteLine("What is the Product ID that you are looking for?");
+            Product prod = new Product();
+            prod = repo.GetProduct(GetInteger());
+            Console.WriteLine($" {prod.ID}  |  {prod.Name}  |  {prod.Price}  |  {prod.CatID}");
+
         }
+        /*          **TODO** implement both functions
+        static void PrintAllProducts(List<Product> prod)
+        {
+
+        }
+        static void PrintOneProduct()
+        {
+        
+
+        }
+        */
         static void DeleteLogic()
-        { }
+        {
+            Console.WriteLine("Give me the product ID that you wish to delete");
+            int ID = GetInteger();
+            int result = repo.DeleteProduct(ID);
+            if (result > 0)
+            {
+                Console.WriteLine("Record Deleted");
+            }
+            else
+                Console.WriteLine("Record not Deleted: ID not found");
+        }
         private static string GetString()
         {
             string answer = Console.ReadLine();

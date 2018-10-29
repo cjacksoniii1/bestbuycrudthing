@@ -1,0 +1,12 @@
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\bin\Debug\netcoreapp2.1\ConnectionConnections.deps.json
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\bin\Debug\netcoreapp2.1\ConnectionConnections.runtimeconfig.json
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\bin\Debug\netcoreapp2.1\ConnectionConnections.runtimeconfig.dev.json
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\bin\Debug\netcoreapp2.1\ConnectionConnections.dll
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\obj\Debug\netcoreapp2.1\ConnectionConnections.csprojAssemblyReference.cache
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\obj\Debug\netcoreapp2.1\ConnectionConnections.csproj.CoreCompileInputs.cache
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\obj\Debug\netcoreapp2.1\ConnectionConnections.AssemblyInfoInputs.cache
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\obj\Debug\netcoreapp2.1\ConnectionConnections.AssemblyInfo.cs
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\bin\Debug\netcoreapp2.1\appsettings.development.json
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\bin\Debug\netcoreapp2.1\ConnectionConnections.pdb
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\obj\Debug\netcoreapp2.1\ConnectionConnections.dll
+C:\Users\Cory\Desktop\Code things\ConnectionsConnections\ConnectionConnections\ConnectionConnections\obj\Debug\netcoreapp2.1\ConnectionConnections.pdb
